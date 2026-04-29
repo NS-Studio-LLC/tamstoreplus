@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Plus Jakarta Sans";
 }
 
 p {
@@ -44,13 +44,25 @@ textarea {
     border: none;
 }
 
-// .page-container {
+.page-container {
+    background: #0E0E0F;
+}
 
-// }
+.section-title {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
 
-// .section-title {
-
-// }
+.section-description {
+    color: #737373;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
 
 // .section-header {
 
@@ -60,3 +72,9 @@ textarea {
 // .line {
 
 // }
+
+.red-line {
+    width: 80px;
+    height: 4px;
+    background-color: #D7001E;
+}
