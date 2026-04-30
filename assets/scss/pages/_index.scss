@@ -2,6 +2,22 @@
 
 .homepage-container {
 
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-right {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
     .homepage-hero {
         position: relative;
         height: 555px;
@@ -137,21 +153,31 @@
         }
     }
 
+    .static-cards {
+        padding: 50px 32px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 32px;
+        row-gap: 24px;
+    }
+
     .categories-section {
         padding: 50px 32px;
         display: flex;
         flex-direction: column;
         gap: 32px;
+    }
 
-        .section-header {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+    .featured-blogs {
+        padding: 0px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
 
-            &-bottom{
-                display: flex;
-                justify-content: space-between;
-            }
+        .section-body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
         }
     }
 

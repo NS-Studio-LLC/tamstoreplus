@@ -15,7 +15,7 @@
     }
 
     .product-infos {
-        padding: 16px;
+        padding: 32px;
         display: flex;
         flex-direction: column;
         gap: 8px;
@@ -37,7 +37,6 @@
 
         .product-description {
             color: #737373;
-            font-family: "Plus Jakarta Sans";
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
