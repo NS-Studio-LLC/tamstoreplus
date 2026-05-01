@@ -11,20 +11,24 @@
 
 // pages
 @use './pages/index';
+@use './pages/products';
 
 // ui
 // (components)
 
 // (buttons)
 @use './ui/buttons/btn-more';
+@use './ui/buttons/store-link';
 
 // (cards)
 @use './ui/cards/product-card';
 @use './ui/cards/static-card';
 @use './ui/cards/blog-card';
+@use './ui/cards/app-promo-card';
 
 // (inputs)
 
 // (slides)
 @use './ui/slides/logoStrip';
 @use './ui/slides/productSwiper';
+@use './ui/slides/homepage-gallery';
