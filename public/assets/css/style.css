@@ -611,6 +611,9 @@ textarea {
   grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
   row-gap: 16px;
 }
+.products-container .partners-section {
+  padding: 50px 32px;
+}
 
 .btn-more {
   display: flex;
