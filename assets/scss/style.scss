@@ -27,6 +27,10 @@
 @use './ui/cards/app-promo-card';
 
 // (inputs)
+@use './ui/inputs/range-input';
+
+// (selects)
+@use './ui/selects/sortSelect';
 
 // (slides)
 @use './ui/slides/logoStrip';

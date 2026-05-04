@@ -60,7 +60,266 @@
     <!-- header end -->
 
     <div class="page-container products-container">
-        
+
+        <div class="products-hero">
+
+            <img src="assets/images/hompage-hero.jpg" alt="">
+
+            <div class="hero-content">
+                <span class="hero-title">Məhsullarımız</span>
+            </div>
+
+            <div class="overlay"></div>
+
+        </div>
+
+        <div class="product-list">
+
+            <div class="product-filters">
+
+                <div class="accordion-filters">
+
+                    <span class="filter-title">Məhsul kataloqu</span>
+
+                    <div class="accordion" id="accordionExample">
+
+                        <!-- BİRİNCİ AKKORDEON -->
+                        <div class="accordion-item">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <span> Süd Məhsulları, Pendir və Yumurta</span>
+                                <img class="arrow-white" src="assets/icons/accordion-arrow.svg" alt="">
+                                <img class="arrow-red" src="assets/icons/accordion-arrow-red.svg" alt="">
+                            </button>
+
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <span class="filter-item">Mal əti</span>
+                                    <span class="filter-item">Quzu əti</span>
+                                    <span class="filter-item">Toyuq əti</span>
+                                    <span class="filter-item">Mal əti kıyması</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- İKİNCİ AKKORDEON -->
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span> Süd Məhsulları, Pendir və Yumurta</span>
+                                <img class="arrow-white" src="assets/icons/accordion-arrow.svg" alt="">
+                                <img class="arrow-red" src="assets/icons/accordion-arrow-red.svg" alt="">
+                            </button>
+
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <span class="filter-item">Mal əti</span>
+                                    <span class="filter-item">Quzu əti</span>
+                                    <span class="filter-item">Toyuq əti</span>
+                                    <span class="filter-item">Mal əti kıyması</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="range-input-container">
+
+                    <span class="filter-title">QİYMƏT ARALIĞI</span>
+
+                    <!-- Slayderin özü -->
+                    <div class="slider-container">
+                        <!-- Qırmızı xəttin arxa fonu -->
+                        <div class="slider-track" id="slider-track"></div>
+
+                        <!-- Görünməyən amma işləyən əsas inputlar -->
+                        <input type="range" min="0" max="1000" value="20" id="slider-min">
+                        <input type="range" min="0" max="1000" value="450" id="slider-max">
+                    </div>
+
+                    <!-- Ekranda görünən qiymətlər -->
+                    <div class="price-values">
+                        <span id="display-min">20 ₼</span>
+                        <span id="display-max">450 ₼</span>
+                    </div>
+
+                    <!-- for backend -->
+                    <input type="hidden" name="min_price" id="input-min-price" value="20">
+                    <input type="hidden" name="max_price" id="input-max-price" value="450">
+                </div>
+
+                <div class="brand-filter-wrapper">
+                    <span class="filter-title">BREND SEÇİMİ</span>
+
+                    <div class="checkbox-list">
+
+                        <!-- Checkbox 1 -->
+                        <label class="custom-checkbox">
+                            <!-- BACKEND ÜÇÜN ƏSAS: name="brands[]" və value="..." -->
+                            <input type="checkbox" name="brands[]" value="tamstore_select" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Tamstore Select</span>
+                        </label>
+
+                        <!-- Checkbox 2 -->
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="brands[]" value="heritage_farms">
+                            <span class="checkmark"></span>
+                            <span class="label-text">Heritage Farms</span>
+                        </label>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="products">
+
+                <div class="products-header">
+
+                    <span class="header-title">Məhsullar</span>
+
+                    <div class="custom-sort-wrapper">
+                        <span class="sort-label">Sırala:</span>
+
+                        <div class="sort-container" id="customSort">
+                            <div class="sort-trigger" id="sortTrigger">
+                                <span id="sortSelectedText">Yenilər</span>
+                                <img src="assets/icons/accordion-arrow.svg" alt="v" class="arrow-icon">
+                            </div>
+
+                            <!-- Açılan menyu -->
+                            <div class="sort-options" id="sortOptions">
+                                <div class="sort-option hidden-option" data-value="newest">Yenilər</div>
+
+                                <!-- Digər seçimlər -->
+                                <div class="sort-option" data-value="price_asc">Ucuzdan bahaya</div>
+                                <div class="sort-option" data-value="price_desc">Bahadan ucuza</div>
+                                <div class="sort-option" data-value="popular">Populyar</div>
+                            </div>
+
+                            <input type="hidden" name="sort_by" id="sortHiddenInput" value="newest">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="products-body">
+
+                    <a href="" class="product-card">
+
+                        <div class="product-image">
+                            <img src="assets/images/product-img.jpg" alt="">
+                        </div>
+
+                        <div class="product-infos">
+                            <span class="product-title">BELÇIKA DELIKATESLƏRI</span>
+                            <p class="product-description">Dünyanın ən ləzzətli guşələrindən</p>
+                        </div>
+
+                    </a>
+
+                    <a href="" class="product-card">
+
+                        <div class="product-image">
+                            <img src="assets/images/product-img.jpg" alt="">
+                        </div>
+
+                        <div class="product-infos">
+                            <span class="product-title">BELÇIKA DELIKATESLƏRI</span>
+                            <p class="product-description">Dünyanın ən ləzzətli guşələrindən</p>
+                        </div>
+
+                    </a>
+
+                    <a href="" class="product-card">
+
+                        <div class="product-image">
+                            <img src="assets/images/product-img.jpg" alt="">
+                        </div>
+
+                        <div class="product-infos">
+                            <span class="product-title">BELÇIKA DELIKATESLƏRI</span>
+                            <p class="product-description">Dünyanın ən ləzzətli guşələrindən</p>
+                        </div>
+
+                    </a>
+
+                    <a href="" class="product-card">
+
+                        <div class="product-image">
+                            <img src="assets/images/product-img.jpg" alt="">
+                        </div>
+
+                        <div class="product-infos">
+                            <span class="product-title">BELÇIKA DELIKATESLƏRI</span>
+                            <p class="product-description">Dünyanın ən ləzzətli guşələrindən</p>
+                        </div>
+
+                    </a>
+
+                    <a href="" class="product-card">
+
+                        <div class="product-image">
+                            <img src="assets/images/product-img.jpg" alt="">
+                        </div>
+
+                        <div class="product-infos">
+                            <span class="product-title">BELÇIKA DELIKATESLƏRI</span>
+                            <p class="product-description">Dünyanın ən ləzzətli guşələrindən</p>
+                        </div>
+
+                    </a>
+
+                    <a href="" class="product-card">
+
+                        <div class="product-image">
+                            <img src="assets/images/product-img.jpg" alt="">
+                        </div>
+
+                        <div class="product-infos">
+                            <span class="product-title">BELÇIKA DELIKATESLƏRI</span>
+                            <p class="product-description">Dünyanın ən ləzzətli guşələrindən</p>
+                        </div>
+
+                    </a>
+
+                    <a href="" class="product-card">
+
+                        <div class="product-image">
+                            <img src="assets/images/product-img.jpg" alt="">
+                        </div>
+
+                        <div class="product-infos">
+                            <span class="product-title">BELÇIKA DELIKATESLƏRI</span>
+                            <p class="product-description">Dünyanın ən ləzzətli guşələrindən</p>
+                        </div>
+
+                    </a>
+
+                    <a href="" class="product-card">
+
+                        <div class="product-image">
+                            <img src="assets/images/product-img.jpg" alt="">
+                        </div>
+
+                        <div class="product-infos">
+                            <span class="product-title">BELÇIKA DELIKATESLƏRI</span>
+                            <p class="product-description">Dünyanın ən ləzzətli guşələrindən</p>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
     <!-- footer start -->
@@ -115,6 +374,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
     <script src="assets/js/productsSwiper.js"></script>
     <script src="assets/js/splide.js"></script>
+    <script src="assets/js/rangeInput.js"></script>
+    <script src="assets/js/sortSelect.js"></script>
 </body>
 
 </html>
