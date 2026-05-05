@@ -1,0 +1,79 @@
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Üstündəki elementlərlə məsafə */
+
+    .pagination-list {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Qutular arasındakı məsafə */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .page-item {
+            /* Standart qutu dizaynı */
+            .page-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.1); /* Çox incə boz çərçivə */
+                border-radius: 2px; /* Çox yüngül yumruluq, tam kvadrat istəsəniz 0 edə bilərsiniz */
+                color: #A3A3A3;
+                font-size: 15px;
+                font-weight: 500;
+                text-decoration: none;
+                transition: all 0.2s ease;
+
+                /* Ox işarələri (SVG) üçün ölçü */
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                /* Üzərinə gələndə (Hover) */
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    color: #FFF;
+                    border-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+
+            /* 1. AKTİV SƏHİFƏ (Seçilmiş) */
+            &.active {
+                .page-link {
+                    background-color: #FFF;
+                    color: #0E0E0F; /* İçindəki yazı qara olur */
+                    border-color: #FFF;
+                    font-weight: 700; /* Daha qalın yazı */
+                    pointer-events: none; /* Aktiv səhifəyə yenidən kliklənməsin */
+                }
+            }
+
+            /* 2. ÜÇ NÖQTƏ (Qısaltma) */
+            &.dots {
+                .page-link {
+                    border: none;
+                    background-color: transparent;
+                    color: #A3A3A3;
+                    cursor: default;
+                    pointer-events: none; /* Klik effekti olmasın */
+                    width: auto; 
+                    padding: 0 4px;
+                }
+            }
+
+            /* 3. DEAKTİV OX (Məsələn 1-ci səhifədəyiksə sola getmək olmasın) */
+            &.disabled {
+                .page-link {
+                    opacity: 0.3; /* Rəngi solur */
+                    cursor: not-allowed;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

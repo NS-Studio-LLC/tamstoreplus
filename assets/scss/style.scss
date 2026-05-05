@@ -8,10 +8,13 @@
 // layout
 @use './layout/header';
 @use './layout/footer';
+@use './layout/page-hero';
 
 // pages
 @use './pages/index';
 @use './pages/products';
+@use './pages/about';
+@use './pages/brances';
 
 // ui
 // (components)
@@ -25,6 +28,8 @@
 @use './ui/cards/static-card';
 @use './ui/cards/blog-card';
 @use './ui/cards/app-promo-card';
+@use './ui/cards/pagination';
+@use './ui/cards/info-card';
 
 // (inputs)
 @use './ui/inputs/range-input';
