@@ -1,0 +1,59 @@
+.branches-page {
+
+
+    .branches-section {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px 32px;
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+
+            &-left {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 45%;
+            }
+
+            &-right {
+                display: flex;
+                align-items: flex-end;
+                width: 25%;
+
+                .search-input-div {
+                    width: 100%;
+                }
+            }
+        }
+
+        .section-body {
+            display: flex;
+            gap: 32px;
+
+            .branch-list {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .map {
+                opacity: 0.6;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+                border-radius: 8px;
+                overflow: hidden;
+                max-height: 780px;
+                width: 50%;
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}

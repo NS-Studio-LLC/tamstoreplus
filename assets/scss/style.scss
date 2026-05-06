@@ -14,7 +14,8 @@
 @use './pages/index';
 @use './pages/products';
 @use './pages/about';
-@use './pages/brances';
+@use './pages/branches';
+@use './pages/partners';
 
 // ui
 // (components)
@@ -30,9 +31,13 @@
 @use './ui/cards/app-promo-card';
 @use './ui/cards/pagination';
 @use './ui/cards/info-card';
+@use './ui/cards/branch-card';
+@use './ui/cards/partner-card';
+@use './ui/cards/feature-card';
 
 // (inputs)
 @use './ui/inputs/range-input';
+@use './ui/inputs/search-input';
 
 // (selects)
 @use './ui/selects/sortSelect';
