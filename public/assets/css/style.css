@@ -149,22 +149,6 @@ textarea {
 .header-actions .btn-group .dropdown-menu a:hover {
   background: #232325;
 }
-.header-actions .phone-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  border-radius: 4px;
-  background: #D2001B;
-}
-.header-actions .phone-div span {
-  color: #FFF;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-}
 
 .footer {
   padding: 50px 100px;
@@ -352,35 +336,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 24px;
-}
-.homepage-container .homepage-hero .hero-content-actions .btn-discover {
-  border-radius: 4px;
-  background: #D7001E;
-  padding: 10px 16px;
-}
-.homepage-container .homepage-hero .hero-content-actions .btn-discover span {
-  color: #FFE7E4;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-}
-.homepage-container .homepage-hero .hero-content-actions .btn-our-branches {
-  padding: 10px 16px;
-  border-radius: 4px;
-  border: 1px solid #FFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.homepage-container .homepage-hero .hero-content-actions .btn-our-branches span {
-  color: #FFF;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
 }
 .homepage-container .homepage-hero .overlay {
   position: absolute;
@@ -910,32 +865,6 @@ textarea {
   align-items: center;
   gap: 24px;
 }
-.partners-container .partners-section .section-header-right .become-partner {
-  padding: 10px 16px;
-  border-radius: 4px;
-  background: #D7001E;
-}
-.partners-container .partners-section .section-header-right .become-partner span {
-  color: #FFE7E4;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-}
-.partners-container .partners-section .section-header-right .more-info {
-  padding: 10px 16px;
-  border-radius: 4px;
-  border: 1px solid #FFF;
-}
-.partners-container .partners-section .section-header-right .more-info span {
-  color: #FFF;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-}
 .partners-container .partners-section .section-body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -1036,6 +965,40 @@ textarea {
   font-weight: 500;
   line-height: 100%;
   letter-spacing: -0.47px;
+}
+
+.btn-red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #D2001B;
+  padding: 10px 16px;
+}
+.btn-red span {
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.btn-white-bordered {
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: 1px solid #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-white-bordered span {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .product-card {
@@ -1680,6 +1643,91 @@ textarea {
   flex-grow: 1;
 }
 
+.input-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.input-with-label label {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.input-with-label input {
+  padding: 18px 24px;
+  color: #737373;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 8px;
+  border: 1px solid #4B4B4B;
+  background: #303031;
+}
+
+.file-upload-input {
+  width: 100%;
+  /* Seçilən faylın adının stili */
+}
+.file-upload-input .file-upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #2A2A2B;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.file-upload-input .file-upload-box:hover {
+  background-color: #333334;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.file-upload-input .file-upload-box .upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.file-upload-input .file-upload-box .upload-icon {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.file-upload-input .file-upload-box .upload-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #E5E5E5;
+}
+.file-upload-input .file-upload-box .upload-title {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px; /* Alt xəttin yazıdan bir az aralı olması üçün */
+}
+.file-upload-input .file-upload-box .upload-subtitle {
+  color: #A3A3A3;
+  font-size: 13px;
+  font-weight: 400;
+}
+.file-upload-input .selected-file-name {
+  margin-top: 12px;
+  color: #02A752; /* Yaşıl rəng (uğurla seçildiyini bildirmək üçün) */
+  font-size: 14px;
+  text-align: center;
+  display: none; /* Başlanğıcda gizlidir */
+}
+
 .custom-sort-wrapper {
   display: flex;
   align-items: center;
@@ -1745,6 +1793,145 @@ textarea {
 }
 .custom-sort-wrapper .sort-container .sort-options .sort-option.hidden-option {
   display: none;
+}
+
+.select-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.select-with-label label {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.select-with-label select {
+  padding: 18px 18px 18px 24px;
+  color: #737373;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 8px;
+  border: 1px solid #4B4B4B;
+  background-color: #303031;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-image: url("/assets/icons/dropdown-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  background-size: 32px;
+}
+
+.application-form-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 4px;
+  background: #212121;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.application-form-modal .modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-bottom: none;
+  padding: 0;
+}
+.application-form-modal .modal-header .form-title {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+.application-form-modal .modal-header .form-description {
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.084px;
+}
+.application-form-modal .modal-body {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.application-form-modal .modal-body .grid-item:nth-child(n+3) {
+  grid-column: span 2;
+}
+.application-form-modal .modal-footer {
+  border-top: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.application-form-modal .modal-footer button {
+  flex-grow: 1;
+}
+
+.success-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 4px;
+  background: #212121;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.success-modal .modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-bottom: none;
+  padding: 0;
+}
+.success-modal .modal-header .modal-title {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+.success-modal .modal-header .modal-description {
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.084px;
+}
+.success-modal .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.success-modal .modal-body img {
+  width: 123px;
+  height: 123px;
+}
+.success-modal .modal-footer {
+  border-top: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.success-modal .modal-footer button {
+  flex-grow: 1;
 }
 
 .logo-strip {

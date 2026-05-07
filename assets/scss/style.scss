@@ -23,6 +23,8 @@
 // (buttons)
 @use './ui/buttons/btn-more';
 @use './ui/buttons/store-link';
+@use './ui/buttons/btn-red';
+@use './ui/buttons/btn-white-bordered';
 
 // (cards)
 @use './ui/cards/product-card';
@@ -38,9 +40,16 @@
 // (inputs)
 @use './ui/inputs/range-input';
 @use './ui/inputs/search-input';
+@use './ui/inputs/input-with-label';
+@use './ui/inputs/file-input';
 
 // (selects)
 @use './ui/selects/sortSelect';
+@use './ui/selects/select-with-label';
+
+// (modals)
+@use './ui/modals/application-form-modal';
+@use './ui/modals/success-modal';
 
 // (slides)
 @use './ui/slides/logoStrip';

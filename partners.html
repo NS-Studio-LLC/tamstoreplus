@@ -3,8 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Təməl viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Zoom meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <title>TamStore Plus</title>
 </head>
 
 <body>
@@ -84,11 +93,11 @@
 
                 <div class="section-header-right">
 
-                    <a href="" class="become-partner">
+                    <a href="" class="btn-red">
                         <span>Partnyor ol</span>
                     </a>
 
-                    <a href="" class="more-info">
+                    <a href="" class="btn-white-bordered">
                         <span>Ətraflı məlumat</span>
                     </a>
 
@@ -208,14 +217,127 @@
                     əldə etmək üçün müraciət edin.
                 </p>
 
-                <button class="open-form">
+                <button class="open-form" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <span>Müraciət formasını doldurun</span>
                 </button>
             </div>
 
-
-
         </div>
+
+        <!-- application modal start -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content application-form-modal">
+                    <div class="modal-header">
+                        <span class="form-title">Partnyor müraciəti</span>
+                        <p class="form-description">
+                            Tamstore+ ilə əməkdaşlıq üçün məlumatlarınızı təqdim edin. Komandamız müraciətinizi nəzərdən
+                            keçirəcək.
+                        </p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-with-label grid-item">
+                            <label for="">Ad və soyad</label>
+                            <input type="text" placeholder="Ad və soyad">
+                        </div>
+
+                        <div class="input-with-label grid-item">
+                            <label for="">Vəzifə</label>
+                            <input type="text" placeholder="Vəzifə">
+                        </div>
+
+                        <div class="input-with-label grid-item">
+                            <label for="">Telefon nömrəsi</label>
+                            <input type="text" placeholder="Telefon nömrəsi">
+                        </div>
+
+                        <div class="input-with-label grid-item">
+                            <label for="">E-mail ünvanı</label>
+                            <input type="text" placeholder="E-mail ünvanı">
+                        </div>
+
+                        <div class="input-with-label grid-item">
+                            <label for="">Şirkətin adı</label>
+                            <input type="text" placeholder="Şirkətin adı">
+                        </div>
+
+                        <div class="select-with-label grid-item">
+                            <label for="fullName">Ad və soyad</label>
+                            <select name="fullName" id="fullName" required>
+                                <option value="" disabled selected hidden>Qida, İçkilər, Orqanik məhsullar, Delikateslər
+                                    və s</option>
+
+                                <option value="ali">Əli Əliyev</option>
+                                <option value="huseyn">Hüseyn Həsənov</option>
+                                <option value="aygun">Aygün Məmmədova</option>
+                            </select>
+                        </div>
+
+                        <div class="file-upload-input grid-item">
+                            <label for="resumeFile" class="file-upload-box">
+
+                                <input type="file" id="resumeFile" name="resume_file"
+                                    accept=".pdf,.doc,.docx,.ppt,.pptx" hidden>
+
+                                <div class="upload-content">
+                                    <div class="upload-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="17 8 12 3 7 8"></polyline>
+                                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                                        </svg>
+                                    </div>
+                                    <span class="upload-title">Kataloq və ya təqdimat faylı</span>
+                                    <span class="upload-subtitle">(PDF, DOC, PPT)</span>
+                                </div>
+                            </label>
+
+                            <div class="selected-file-name" id="fileNameDisplay"></div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-white-bordered" data-bs-dismiss="modal" aria-label="Close">
+                            <span>Ləğv et</span>
+                        </button>
+
+                        <button class="btn-red">
+                            <span>Müraciət göndər</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- application modal end -->
+
+        <!-- succes modal start -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content success-modal">
+                    <div class="modal-header">
+                        <span class="modal-title">Müraciətiniz qəbul edildi</span>
+                        <p class="modal-description">
+                            Partnyorluq üçün müraciətiniz qəbul olundu. Tamstore+ komandası ən qısa zamanda sizinlə
+                            əlaqə saxlayacaq.
+                        </p>
+                    </div>
+                    <div class="modal-body">
+                        <img src="assets/icons/success-icon.svg" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-white-bordered" data-bs-dismiss="modal" aria-label="Close">
+                            <span>Bağla</span>
+                        </button>
+
+                        <a class="btn-red">
+                            <span>Ana səhifəyə qayıt</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- succes modal end -->
 
     </div>
 
