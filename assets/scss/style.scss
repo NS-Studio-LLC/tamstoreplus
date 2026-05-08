@@ -16,6 +16,7 @@
 @use './pages/about';
 @use './pages/branches';
 @use './pages/partners';
+@use './pages/news';
 
 // ui
 // (components)
@@ -36,6 +37,8 @@
 @use './ui/cards/branch-card';
 @use './ui/cards/partner-card';
 @use './ui/cards/feature-card';
+@use './ui/cards/news-card';
+@use './ui/cards/subscription-card';
 
 // (inputs)
 @use './ui/inputs/range-input';
