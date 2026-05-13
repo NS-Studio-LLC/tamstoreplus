@@ -28,6 +28,10 @@
         width: 100%;
         z-index: 1;
 
+        .section-title {
+            line-height: 100%;
+        }
+
         .left-side {
             display: flex;
             flex-direction: column;

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Təməl viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Zoom meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <title>TamStore Plus</title>
+</head>
+
+<body>
+
+    <!-- header start -->
+    <div id="header-placeholder"></div>
+    <script>
+        (function () {
+            const url = "header.html";
+            const cacheKey = `partial:${url}`;
+            const node = document.getElementById("header-placeholder");
+            if (!node) return;
+
+            try {
+                const cached = localStorage.getItem(cacheKey);
+                if (cached) node.innerHTML = cached;
+            } catch (error) {
+                console.warn("Header preload cache error:", error);
+            }
+
+            if (window.location.protocol === "file:") return;
+
+            fetch(url)
+                .then((response) => {
+                    if (!response.ok) throw new Error(`Header yüklənmədi: ${response.status}`);
+                    return response.text();
+                })
+                .then((html) => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, "text/html");
+                    const nextHtml = doc.body.innerHTML;
+                    if (node.innerHTML !== nextHtml) node.innerHTML = nextHtml;
+                    try {
+                        localStorage.setItem(cacheKey, nextHtml);
+                    } catch (error) {
+                        console.warn("Header cache write error:", error);
+                    }
+                })
+                .catch((error) => {
+                    console.warn("Header preload fetch error:", error);
+                });
+        })();
+    </script>
+    <!-- header end -->
+
+    <div class="page-container career-container">
+
+        <!-- hero start -->
+        <div class="page-hero partners-hero">
+
+            <img src="assets/images/hompage-hero.jpg" alt="">
+
+            <div class="hero-content">
+                <span class="hero-title">Karyera</span>
+                <span class="breadcrumb">Əsas Səhifə &nbsp; &nbsp;/ &nbsp; &nbsp; Karyera</span>
+            </div>
+
+            <div class="overlay"></div>
+
+        </div>
+        <!-- hero end -->
+
+        <!-- why-us start -->
+        <div class="why-us-section">
+
+            <div class="section-header">
+                <div class="section-header-left">
+                    <span class="section-title">Niyə insanlar Tamstore-da işləməyi sevir?</span>
+                    <div class="red-line"></div>
+                </div>
+
+            </div>
+
+            <div class="section-body">
+
+                <div class="feature-card">
+
+                    <div class="card-content">
+                        <img src="assets/icons/f5.svg" alt="">
+
+                        <span class="card-title">Keyfiyyət Təminatı</span>
+
+                        <p class="card-description">
+                            Hər bir partnyorumuz ciddi seçim mərhələsindən
+                            keçərək premium standartlarımıza uyğunluğunu
+                            sübut edir.
+                        </p>
+                    </div>
+
+                    <img class="background-icon" src="assets/icons/featured-card-bckr-icon.svg" alt="">
+
+                    <div class="overlay"></div>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="card-content">
+                        <img src="assets/icons/f1.svg" alt="">
+
+                        <span class="card-title">Keyfiyyət Təminatı</span>
+
+                        <p class="card-description">
+                            Hər bir partnyorumuz ciddi seçim mərhələsindən
+                            keçərək premium standartlarımıza uyğunluğunu
+                            sübut edir.
+                        </p>
+                    </div>
+
+                    <img class="background-icon" src="assets/icons/featured-card-bckr-icon.svg" alt="">
+
+                    <div class="overlay"></div>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="card-content">
+                        <img src="assets/icons/f4.svg" alt="">
+
+                        <span class="card-title">Keyfiyyət Təminatı</span>
+
+                        <p class="card-description">
+                            Hər bir partnyorumuz ciddi seçim mərhələsindən
+                            keçərək premium standartlarımıza uyğunluğunu
+                            sübut edir.
+                        </p>
+                    </div>
+
+                    <img class="background-icon" src="assets/icons/featured-card-bckr-icon.svg" alt="">
+
+                    <div class="overlay"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- why-us end -->
+
+        <!-- vacancies start -->
+        <div class="vacancies-section">
+
+            <div class="section-header">
+
+                <div class="section-header-left">
+                    <span class="section-title">Aktiv vakansiyalar</span>
+                    <div class="red-line"></div>
+                </div>
+
+            </div>
+
+            <div class="section-body">
+
+                <div class="vacancy-cards">
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+
+                    <div class="vacancy-card">
+
+                        <span class="card-title">
+                            İstilik, havalandırma və soyuducu (İHS) sistemlər üzrə mütəxəssis
+                        </span>
+
+                        <button class="btn-red">
+                            <span>Müraciət et</span>
+                        </button>
+
+                    </div>
+                </div>
+
+                <nav aria-label="Səhifələmə" class="custom-pagination">
+                    <ul class="pagination-list">
+
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <!-- Aktiv Səhifə -->
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+
+                        <!-- Digər Səhifələr -->
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+
+                        <!-- Üç nöqtə (Aradakı səhifələri qısaltmaq üçün) -->
+                        <li class="page-item dots">
+                            <span class="page-link">...</span>
+                        </li>
+
+                        <!-- Sonuncu Səhifə -->
+                        <li class="page-item">
+                            <a class="page-link" href="#">12</a>
+                        </li>
+
+                        <!-- Sağ Ox (İrəli) -->
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+        <!-- vacancies end -->
+
+        <!-- subscription start -->
+        <div class="subscription-card">
+            <img src="assets/images/blog-img2.jpg" alt="">
+
+            <div class="card-content">
+
+                <div class="left-side">
+                    <span class="section-title">
+                        Aktiv vakansiya
+                        xəbərlərini ilk siz alın
+                    </span>
+
+                    <p class="section-description">
+                        Yeniliklərdən və özəl kampaniyalardan anında xəbərdar olmaq
+                        üçün bülletenimizə abunə olun.
+                    </p>
+                </div>
+
+                <div class="right-side">
+
+                    <div class="subscription-form">
+                        <div class="search-input-div">
+                            <input type="text" placeholder="E-poçt ünvanınız">
+                        </div>
+
+                        <button class="btn-red">
+                            <span>Qoşulun</span>
+                        </button>
+                    </div>
+
+                    <span class="warning-text">Abunə olmaqla məxfilik siyasəti ilə razılaşmış olursunuz.</span>
+
+                </div>
+
+            </div>
+
+            <div class="overlay"></div>
+        </div>
+        <!-- subscription end -->
+
+        <!-- application modal start -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content send-cv-modal">
+
+                    <div class="modal-header">
+                        <span class="form-title">Komandamıza qoşulun</span>
+                        <p class="form-description">
+                            Tamstore+ komandasında yer almaq üçün CV-nizi əlavə edin. Maksimum fayl ölçüsü: 50MB.
+                        </p>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="file-upload-input">
+                            <label for="resumeFile" class="file-upload-box">
+
+                                <input type="file" id="resumeFile" name="resume_file"
+                                    accept=".pdf,.doc,.docx,.ppt,.pptx" hidden>
+
+                                <div class="upload-content">
+                                    <div class="upload-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="17 8 12 3 7 8"></polyline>
+                                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                                        </svg>
+                                    </div>
+                                    <span class="upload-title">CV faylınızı buraya əlavə edin</span>
+                                    <span class="upload-subtitle">(PDF, DOC, PPT)</span>
+                                </div>
+                            </label>
+
+                            <div class="selected-file-name" id="fileNameDisplay"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn-white-bordered" data-bs-dismiss="modal" aria-label="Close">
+                            <span>Ləğv et</span>
+                        </button>
+
+                        <button class="btn-red">
+                            <span>Göndər</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- application modal end -->
+
+        <!-- succes modal start -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content success-modal">
+                    <div class="modal-header">
+                        <span class="modal-title">Müraciətiniz qəbul edildi</span>
+                        <p class="modal-description">
+                            Partnyorluq üçün müraciətiniz qəbul olundu. Tamstore+ komandası ən qısa zamanda sizinlə
+                            əlaqə saxlayacaq.
+                        </p>
+                    </div>
+                    <div class="modal-body">
+                        <img src="assets/icons/success-icon.svg" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-white-bordered" data-bs-dismiss="modal" aria-label="Close">
+                            <span>Bağla</span>
+                        </button>
+
+                        <a class="btn-red">
+                            <span>Ana səhifəyə qayıt</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- succes modal end -->
+
+    </div>
+
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+    <script src="assets/js/productsSwiper.js"></script>
+    <script src="assets/js/splide.js"></script>
+</body>
+
+</html>

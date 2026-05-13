@@ -19,6 +19,8 @@
 @use './pages/news';
 @use './pages/news-details';
 @use './pages/blogs';
+@use './pages/blog-details';
+@use './pages/career';
 
 // ui
 // (components)
@@ -44,6 +46,7 @@
 @use './ui/cards/news-card';
 @use './ui/cards/subscription-card';
 @use './ui/cards/blog-card';
+@use './ui/cards/vacancy-card';
 
 // (inputs)
 @use './ui/inputs/range-input';
@@ -58,6 +61,7 @@
 // (modals)
 @use './ui/modals/application-form-modal';
 @use './ui/modals/success-modal';
+@use './ui/modals/send-cv-modal';
 
 // (slides)
 @use './ui/slides/logoStrip';

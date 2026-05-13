@@ -1,6 +1,22 @@
-.news-details-container {
+.blog-details-container {
 
-    .news-details {
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-right {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    .blog-details {
 
         &-header {
             position: relative;
@@ -37,7 +53,7 @@
                     align-items: center;
                     gap: 16px;
 
-                    .news-category {
+                    .blog-category {
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -58,7 +74,7 @@
                     }
                 }
 
-                .news-title {
+                .blog-title {
                     color: #FFF;
                     font-size: 42px;
                     font-style: normal;
@@ -66,7 +82,7 @@
                     line-height: 140%;
                 }
 
-                .news-writer {
+                .blog-writer {
                     display: flex;
                     align-items: flex-end;
                     gap: 16px;
@@ -124,7 +140,7 @@
             padding: 50px 32px;
             gap: 32px;
 
-            .share-news {
+            .share-blog {
                 display: flex;
                 flex-direction: column;
                 gap: 32px;
@@ -142,13 +158,13 @@
 
             }
 
-            .news-content {
+            .blog-content {
                 display: flex;
                 flex-direction: column;
                 gap: 32px;
 
                 .text-content {
-                    .news-content-image {
+                    .blog-content-image {
                         margin: 24px 0;
                         border-radius: 16px;
                         overflow: hidden;
@@ -161,7 +177,7 @@
                     }
                 }
 
-                .news-tags {
+                .blog-tags {
                     display: flex;
                     align-items: center;
                     gap: 12px;
@@ -233,6 +249,19 @@
 
         }
 
+    }
+
+    .featured-blogs {
+        padding: 0px 32px 50px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .section-body {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 32px;
+        }
     }
 
 }
