@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -27,6 +29,10 @@
         .active {
             color: #FFF;
         }
+
+        @include mq(tablet-portrait-up) {
+            display: none;
+        }
     }
 
     &-actions {
@@ -34,61 +40,31 @@
         align-items: center;
         gap: 16px;
 
-        .btn-group {
-            border-radius: 4px;
-            border: 1px solid #FFF;
-
-            .dropdown-toggle {
-                padding: 8px 16px;
-                display: flex;
-                align-items: center;
-                gap: 4px;
-
-                color: #FFF;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                border: none !important;
-
-                &::after {
-                    display: none;
-                }
-
-                span {
-                    display: inline-block;
-                    color: #FFF;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
-                    text-transform: uppercase;
-                }
-
-            }
-
-            .dropdown-menu {
-                border-radius: 4px;
-                background: #0E0E0F;
-                min-width: 78px;
-
-                a {
-                    color: #FFF;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 20px;
-                    letter-spacing: -0.35px;
-                    transition: all 0.2s ease-in;
-
-                    &:hover {
-                        background: #232325;
-                    }
-                }
-            }
-
-
+        @include mq(tablet-portrait-up) {
+            display: none;
         }
 
     }
+
+    .menu-button {
+        display: none;
+
+        @include mq(tablet-portrait-up) {
+            display: inline-block;
+        }
+    }
+
+}
+
+.is-sticky {
+    backdrop-filter: blur(104px);
+    -webkit-backdrop-filter: blur(104px);
+    background: rgba(29, 29, 29, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
 }

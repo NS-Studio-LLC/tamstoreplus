@@ -58,6 +58,9 @@
 @use './ui/selects/sortSelect';
 @use './ui/selects/select-with-label';
 
+// dropdowns
+@use './ui/dropdowns/lang-selection';
+
 // (modals)
 @use './ui/modals/application-form-modal';
 @use './ui/modals/success-modal';
@@ -67,3 +70,8 @@
 @use './ui/slides/logoStrip';
 @use './ui/slides/productSwiper';
 @use './ui/slides/homepage-gallery';
+
+// dropdowns
+
+// offcanvas
+@use './ui/offcanvas/offcanvas';
