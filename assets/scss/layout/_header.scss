@@ -11,6 +11,16 @@
     position: relative;
     z-index: 9;
 
+
+
+    @include mq(desktop-up) {
+        padding: 16px 50px;
+    }
+
+    @include mq(lg-down) {
+        padding: 16px 50px;
+    }
+
     .header-navigations {
         display: flex;
         align-items: center;
@@ -30,7 +40,7 @@
             color: #FFF;
         }
 
-        @include mq(tablet-portrait-up) {
+        @include mq(lg-down) {
             display: none;
         }
     }
@@ -40,7 +50,7 @@
         align-items: center;
         gap: 16px;
 
-        @include mq(tablet-portrait-up) {
+        @include mq(lg-down) {
             display: none;
         }
 
@@ -49,7 +59,7 @@
     .menu-button {
         display: none;
 
-        @include mq(tablet-portrait-up) {
+        @include mq(lg-down) {
             display: inline-block;
         }
     }

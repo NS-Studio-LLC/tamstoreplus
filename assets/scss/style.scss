@@ -9,6 +9,7 @@
 @use './layout/header';
 @use './layout/footer';
 @use './layout/page-hero';
+@use './layout/homepage-hero';
 
 // pages
 @use './pages/index';
@@ -47,6 +48,7 @@
 @use './ui/cards/subscription-card';
 @use './ui/cards/blog-card';
 @use './ui/cards/vacancy-card';
+@use './ui/cards/selected-branch-card';
 
 // (inputs)
 @use './ui/inputs/range-input';
@@ -65,6 +67,7 @@
 @use './ui/modals/application-form-modal';
 @use './ui/modals/success-modal';
 @use './ui/modals/send-cv-modal';
+@use './ui/modals/selected-branch-modal';
 
 // (slides)
 @use './ui/slides/logoStrip';

@@ -1,6 +1,12 @@
+@use '../../abstracts/mixins' as *;
+
 .app-promo-card {
     display: flex;
     overflow: hidden;
+
+    @include mq(tablet-portrait-up) {
+        flex-direction: column;
+    }
 
     .section-info {
         background-color: #D2001B;
@@ -9,6 +15,10 @@
         justify-content: center;
         padding: 100px;
         width: 50%;
+
+        @include mq(tablet-portrait-up) {
+            width: 100%;
+        }
 
         .centered-div {
             display: flex;
@@ -41,12 +51,13 @@
     }
 
     .qr-code-container {
-        // background-image: url('/assets/images/gallery3.png');
-        // background-repeat: no-repeat;
-        // background-position: center;
         width: 50%;
         height: 560px;
         position: relative;
+
+        @include mq(tablet-portrait-up) {
+            width: 100%;
+        }
 
         .background-image {
             object-fit: cover;

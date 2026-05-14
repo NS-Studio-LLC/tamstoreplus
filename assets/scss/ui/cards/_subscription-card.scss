@@ -1,6 +1,13 @@
+@use '../../abstracts/mixins' as *;
+
+
 .subscription-card {
     position: relative;
     height: 280px;
+
+    @include mq(tablet-portrait-up) {
+        height: 450px;
+    }
 
     img {
         object-fit: cover;
@@ -28,6 +35,11 @@
         width: 100%;
         z-index: 1;
 
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+            gap: 50px;
+        }
+
         .section-title {
             line-height: 100%;
         }
@@ -37,6 +49,10 @@
             flex-direction: column;
             gap: 24px;
             width: 40%;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
         }
 
         .right-side {
@@ -44,6 +60,10 @@
             flex-direction: column;
             gap: 16px;
             width: 40%;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
 
             .subscription-form {
                 display: flex;

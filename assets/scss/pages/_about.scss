@@ -7,8 +7,18 @@
         gap: 90px;
         padding: 50px 32px;
 
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+            padding: 50px 16px;
+            gap: 24px;
+        }
+
         .image-side {
             width: 50%;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
 
             img {
                 object-fit: cover;
@@ -19,14 +29,13 @@
 
         .text-side {
             width: 50%;
-            position: relative;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
 
 
             .centered-div {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
                 width: 100%;
 
                 .title {
@@ -76,6 +85,10 @@
         flex-direction: column;
         gap: 42px;
 
+        @include mq(tablet-portrait-up) {
+            padding: 0 16px;
+        }
+
         .section-header {
             display: flex;
             flex-direction: column;
@@ -91,12 +104,28 @@
             .grid-item:nth-child(1),
             .grid-item:nth-child(2) {
                 grid-column: span 3;
+
+                @include mq(lg-down) {
+                    grid-column: span 1;
+                }
             }
 
             .grid-item:nth-child(3),
             .grid-item:nth-child(4),
             .grid-item:nth-child(5) {
                 grid-column: span 2;
+
+                @include mq(lg-down) {
+                    grid-column: span 1;
+                }
+            }
+
+            @include mq(lg-down) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mq(tablet-portrait-up) {
+                grid-template-columns: repeat(1, 1fr);
             }
         }
 
@@ -107,7 +136,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 48px;
+
+        @include mq(phone-only) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 50px 32px;
+        }
 
         .count-box {
             display: flex;
@@ -142,6 +178,10 @@
         gap: 42px;
         padding: 32px;
 
+        @include mq(tablet-landscape-up) {
+            padding: 32px;
+        }
+
         .section-header {
             display: flex;
             flex-direction: column;
@@ -154,6 +194,10 @@
             grid-template-columns: 2fr 1fr;
             grid-template-rows: repeat(2, 250px);
             gap: 24px;
+
+            @include mq(tablet-landscape-up) {
+                grid-template-columns: repeat(1, 1fr)
+            }
 
             .bento-item {
                 border-radius: 8px;
@@ -170,6 +214,10 @@
                 grid-row: span 2;
                 border-radius: 8px;
                 overflow: hidden;
+
+                @include mq(tablet-landscape-up) {
+                    grid-row: span 1;
+                }
             }
 
             .item-bottom-right {
@@ -192,6 +240,7 @@
                     font-weight: 700;
                     line-height: 32px;
                     margin-bottom: 16px;
+                    white-space: wrap;
                 }
 
                 .description {

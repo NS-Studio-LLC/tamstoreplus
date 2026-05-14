@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .partners-container {
 
     .partners-section {
@@ -6,15 +8,27 @@
         flex-direction: column;
         gap: 50px;
 
+        @include mq(tablet-portrait-up) {
+            padding: 50px 16px 100px 16px;
+        }
+
         .section-header {
             display: flex;
             justify-content: space-between;
+
+            @include mq(tablet-portrait-up) {
+                flex-direction: column;
+            }
 
             &-left {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
                 width: 45%;
+
+                @include mq(tablet-portrait-up) {
+                    width: 100%;
+                }
             }
 
             &-right {
@@ -29,7 +43,6 @@
 
         .section-body {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2px;
 
@@ -42,6 +55,14 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 48px;
         padding: 32px 32px 100px 32px;
+
+        @include mq(lg-down) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq(tablet-portrait-up) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     .contact-us {
@@ -59,6 +80,14 @@
             align-items: center;
             gap: 24px;
             width: 50%;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
+        }
+
+        .section-title {
+            text-align: center;
         }
 
 
