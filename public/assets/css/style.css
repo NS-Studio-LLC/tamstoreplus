@@ -1087,6 +1087,11 @@ textarea {
   gap: 24px;
 }
 .partners-container .partners-section .section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.partners-container .partners-section .section-body .partners {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2px;
@@ -1719,6 +1724,11 @@ textarea {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+@media only screen and (max-width: 992px) {
+  .career-container .why-us-section .section-body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .career-container .vacancies-section {
   padding: 32px;
   display: flex;
@@ -1809,7 +1819,7 @@ textarea {
 .btn-white-bordered span {
   color: #FFF;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
