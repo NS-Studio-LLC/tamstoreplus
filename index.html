@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="public/assets/css/style.css">
     <title>TamStore Plus</title>
 </head>
@@ -69,14 +70,15 @@
 
             <div class="hero-content">
 
-                <span class="first-slogan">Yüksək Keyfiyyət zəmanəti</span>
+                <span class="first-slogan" data-splitting>Yüksək Keyfiyyət zəmanəti</span>
 
-                <p class="second-slogan">
+                <p class="second-slogan" data-splitting>
                     Hər Gün <br>
                     <span>Premium</span> Dad.
                 </p>
 
-                <p class="hero-content-description">Tamstore Plus ilə alış-veriş təcrübənizi yeni zirvələrə daşıyın. Ən
+                <p class="hero-content-description" data-splitting>Tamstore Plus ilə alış-veriş təcrübənizi yeni
+                    zirvələrə daşıyın. Ən
                     təzə
                     məhsullar və eksklüziv xidmət ilə süfrələrinizə dəyər qatırıq.
                 </p>
@@ -691,6 +693,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script>
+        Splitting();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
     <script

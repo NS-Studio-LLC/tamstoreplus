@@ -25,15 +25,53 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 32px;
+        gap: 8px;
 
         a {
-            color: #A3A3A3;
+            --dot: 6px;
+            --gap: 6px;
+            --shift: calc(var(--dot) + var(--gap));
+            color: #fff;
             font-size: 14px;
-            font-style: normal;
             font-weight: 500;
-            line-height: 20px;
-            letter-spacing: -0.35px;
+            line-height: 140%;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            padding-left: calc(12px + var(--shift));
+
+            .circle {
+                width: var(--dot);
+                height: var(--dot);
+                border-radius: 50%;
+                background: #02A752;
+
+                position: absolute;
+                top: 50%;
+                left: 12px;
+                transform: translate(var(--shift), -50%);
+                opacity: 0;
+
+                transition: transform .35s ease, opacity .2s ease;
+            }
+
+            span {
+                display: inline-block;
+                transform: translateX(calc(var(--shift) * -1));
+                transition: transform .35s ease;
+            }
+
+            &:hover {
+                .circle {
+                    transform: translate(0, -50%);
+                    opacity: 1;
+                }
+
+                span {
+                    transform: translateX(0);
+                    color: #D7001E;
+                }
+            }
         }
 
         .active {
@@ -76,5 +114,5 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 9;
+    z-index: 9999;
 }

@@ -123,12 +123,12 @@
 
         &-body {
             display: flex;
-            padding: 50px 32px;
+            padding: 50px 32px 25px 32px;
             gap: 32px;
 
             @include mq(tablet-portrait-up) {
                 flex-direction: column;
-                padding: 50px 16px;
+                padding: 50px 16px 25px 16px;
                 gap: 16px;
             }
 

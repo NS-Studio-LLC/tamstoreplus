@@ -3,6 +3,7 @@
 .app-promo-card {
     display: flex;
     overflow: hidden;
+    padding: 25px 0;
 
     @include mq(tablet-portrait-up) {
         flex-direction: column;

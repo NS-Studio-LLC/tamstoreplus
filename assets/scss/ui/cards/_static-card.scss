@@ -3,19 +3,20 @@
     max-width: 440px;
     height: 400px;
     overflow: hidden;
-    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-in;
     cursor: pointer;
     background-color: #1B1B1C;
 
     &:hover {
-        transform: scale(1.02);
+        transform: scale(1.05);
+        border: 1px solid #c2bbbb;
     }
 
     .backgorund-image {
         object-fit: cover;
         width: 100%;
         height: 100%;
-        transition: all 0.2s ease-in;
+        transition: all 0.3s ease-in;
     }
 
     .text-content {
@@ -82,8 +83,8 @@
     }
 }
 
-.no-image{
-    .overlay{
+.no-image {
+    .overlay {
         display: none !important;
     }
 }

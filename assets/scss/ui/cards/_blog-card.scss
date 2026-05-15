@@ -5,6 +5,14 @@
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
 
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        transform: scale(1.05);
+        border: 1px solid #c2bbbb;
+
+    }
+
     .blog-image {
         height: 350px;
         position: relative;

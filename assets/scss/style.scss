@@ -22,6 +22,7 @@
 @use './pages/blogs';
 @use './pages/blog-details';
 @use './pages/career';
+@use './pages/product-details';
 
 // ui
 // (components)
@@ -60,7 +61,7 @@
 @use './ui/selects/sortSelect';
 @use './ui/selects/select-with-label';
 
-// dropdowns
+// (dropdowns)
 @use './ui/dropdowns/lang-selection';
 
 // (modals)
@@ -74,7 +75,8 @@
 @use './ui/slides/productSwiper';
 @use './ui/slides/homepage-gallery';
 
-// dropdowns
+// (fotorama)
+@use './ui/fotorama/fotorama';
 
 // offcanvas
 @use './ui/offcanvas/offcanvas';

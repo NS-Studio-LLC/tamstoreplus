@@ -19,14 +19,14 @@
     }
 
     .partners-section {
-        padding: 32px;
+        padding: 50px 32px 25px 32px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 32px;
 
         @include mq(tablet-portrait-up) {
-            padding: 50px 16px;
+            padding: 50px 16px 25px 16px;
         }
 
         .logo-strip {
@@ -43,7 +43,7 @@
     }
 
     .static-cards {
-        padding: 50px 32px;
+        padding: 25px 32px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 32px;
@@ -60,14 +60,14 @@
     }
 
     .categories-section {
-        padding: 50px 32px;
+        padding: 25px 32px;
         display: flex;
         flex-direction: column;
         gap: 32px;
     }
 
     .featured-blogs {
-        padding: 0px 32px 50px 32px;
+        padding: 25px 32px 25px 32px;
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -92,7 +92,7 @@
         flex-direction: column;
         align-items: center;
         gap: 24px;
-        padding-bottom: 50px;
+        padding: 25px 0;
     }
 
 }
