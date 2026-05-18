@@ -62,12 +62,41 @@ textarea {
     background: #0E0E0F;
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &-right {
+        display: flex;
+        align-items: flex-end;
+        gap: 12px;
+
+        &-actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    }
+}
+
 .section-title {
     color: #FFF;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: 40px;
+
+    @include mq(phone-only) {
+        font-size: 24px;
+    }
 }
 
 .section-description {
@@ -76,16 +105,11 @@ textarea {
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+
+    @include mq(phone-only) {
+        font-size: 14px;
+    }
 }
-
-// .section-header {
-
-// }
-
-
-// .line {
-
-// }
 
 .red-line {
     width: 80px;

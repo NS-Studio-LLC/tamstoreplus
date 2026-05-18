@@ -57,12 +57,11 @@
         }
     }
 
-    /* Seçilən faylın adının stili */
     .selected-file-name {
         margin-top: 12px;
-        color: #02A752; /* Yaşıl rəng (uğurla seçildiyini bildirmək üçün) */
+        color: #02A752; 
         font-size: 14px;
         text-align: center;
-        display: none; /* Başlanğıcda gizlidir */
+        display: none; 
     }
 }

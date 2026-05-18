@@ -2,22 +2,6 @@
 
 .career-container {
 
-    .section-header {
-        display: flex;
-        justify-content: space-between;
-
-        &-left {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        &-right {
-            display: flex;
-            align-items: flex-end;
-        }
-    }
-
     .why-us-section {
         padding: 50px 32px 25px 32px;
         display: flex;
