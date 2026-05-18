@@ -1844,6 +1844,7 @@ textarea {
 @media only screen and (max-width: 768px) {
   .product-details-container .product-details {
     flex-direction: column;
+    padding: 25px 16px;
   }
   .product-details-container .product-details .fotorama-container {
     width: 100%;
@@ -1908,6 +1909,7 @@ textarea {
 @media only screen and (max-width: 768px) {
   .product-details-container .product-detailed-infos {
     flex-direction: column;
+    padding: 25px 16px;
   }
   .product-details-container .product-detailed-infos .detailed-description-box {
     width: 100%;
@@ -1921,6 +1923,11 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .product-details-container .featured-products {
+    padding: 25px 16px 25px 16px;
+  }
 }
 
 .btn-more {
