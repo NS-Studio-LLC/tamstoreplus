@@ -115,9 +115,8 @@ textarea {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 16px 100px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: #0E0E0F;
   -webkit-backdrop-filter: blur(12px);
@@ -128,11 +127,13 @@ textarea {
 @media only screen and (max-width: 1200px) {
   .header {
     padding: 16px 50px;
+    justify-content: space-between;
   }
 }
 @media only screen and (max-width: 992px) {
   .header {
     padding: 16px 50px;
+    justify-content: space-between;
   }
 }
 .header .header-navigations {
@@ -358,12 +359,18 @@ textarea {
   line-height: 140%;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 768px) {
+  .page-hero .hero-content .hero-title {
+    font-size: 32px;
+  }
+}
 .page-hero .hero-content .breadcrumb {
   color: #FFF;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  white-space: nowrap;
 }
 .page-hero .overlay {
   position: absolute;
@@ -1065,6 +1072,11 @@ textarea {
   align-items: flex-end;
   width: 25%;
 }
+@media only screen and (max-width: 768px) {
+  .branches-container .branches-section .section-header-right {
+    width: 100%;
+  }
+}
 .branches-container .branches-section .section-header-right .search-input-div {
   width: 100%;
 }
@@ -1252,6 +1264,11 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
   gap: 16px;
+}
+@media only screen and (max-width: 480px) {
+  .news-container .news-section .tab-pane {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
 
 .news-details-container .news-details-header {
@@ -1506,6 +1523,11 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
   gap: 16px;
+}
+@media only screen and (max-width: 480px) {
+  .blogs-container .blogs-section .tab-pane .blog-cards {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
 
 .blog-details-container .blog-details-header {
@@ -1800,7 +1822,7 @@ textarea {
 .product-details-container .product-details .product-infos .product-info-card .product-features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 24px;
+  gap: 24px;
 }
 .product-details-container .product-details .product-infos .product-info-card .product-features .product-feature {
   display: flex;
@@ -1818,6 +1840,17 @@ textarea {
 .product-details-container .product-details .product-infos .product-info-card .product-features .product-feature svg {
   width: 18px;
   height: 18px;
+}
+@media only screen and (max-width: 768px) {
+  .product-details-container .product-details {
+    flex-direction: column;
+  }
+  .product-details-container .product-details .fotorama-container {
+    width: 100%;
+  }
+  .product-details-container .product-details .product-infos {
+    width: 100%;
+  }
 }
 .product-details-container .product-detailed-infos {
   padding: 25px 32px;
@@ -1871,6 +1904,17 @@ textarea {
 .product-details-container .product-detailed-infos .technical-specifications .tecnical-info-box span:last-child {
   color: #FFFFFF;
   font-size: 12px;
+}
+@media only screen and (max-width: 768px) {
+  .product-details-container .product-detailed-infos {
+    flex-direction: column;
+  }
+  .product-details-container .product-detailed-infos .detailed-description-box {
+    width: 100%;
+  }
+  .product-details-container .product-detailed-infos .technical-specifications {
+    width: 100%;
+  }
 }
 .product-details-container .featured-products {
   padding: 25px 32px 25px 32px;
@@ -2718,6 +2762,14 @@ textarea {
   gap: 8px;
   width: 100%;
 }
+@media only screen and (max-width: 480px) {
+  .subscription-card .card-content .right-side .subscription-form {
+    flex-direction: column;
+  }
+  .subscription-card .card-content .right-side .subscription-form .btn-red {
+    width: 100%;
+  }
+}
 .subscription-card .card-content .right-side .subscription-form .btn-red {
   padding: 14px;
 }
@@ -3142,7 +3194,7 @@ textarea {
   line-height: normal;
 }
 .select-with-label select {
-  padding: 18px 18px 18px 24px;
+  padding: 18px 64px 18px 24px;
   color: #737373;
   font-size: 16px;
   font-style: normal;
@@ -3158,6 +3210,10 @@ textarea {
   background-repeat: no-repeat;
   background-position: right 24px center;
   background-size: 32px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .lang-selection {
@@ -3215,6 +3271,11 @@ textarea {
   background: #212121;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media only screen and (max-width: 480px) {
+  .application-form-modal {
+    width: 100%;
+  }
 }
 .application-form-modal .modal-header {
   display: flex;

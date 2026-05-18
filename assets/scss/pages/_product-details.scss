@@ -48,7 +48,7 @@
                 .product-features {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
-                    row-gap: 24px;
+                    gap: 24px;
 
                     .product-feature {
                         display: flex;
@@ -71,6 +71,20 @@
                         }
                     }
                 }
+            }
+
+        }
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+
+            .fotorama-container {
+                width: 100%;
+            }
+
+            .product-infos {
+                width: 100%;
+
             }
 
         }
@@ -139,6 +153,17 @@
                         font-size: 12px;
                     }
                 }
+            }
+        }
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+            .detailed-description-box {
+                width: 100%;
+            }
+
+            .technical-specifications {
+                width: 100%;
             }
         }
 

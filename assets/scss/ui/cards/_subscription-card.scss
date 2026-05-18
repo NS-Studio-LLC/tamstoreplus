@@ -71,6 +71,14 @@
                 gap: 8px;
                 width: 100%;
 
+                @include mq(phone-only) {
+                    flex-direction: column;
+
+                    .btn-red {
+                        width: 100%;
+                    }
+                }
+
                 .btn-red {
                     padding: 14px;
                 }

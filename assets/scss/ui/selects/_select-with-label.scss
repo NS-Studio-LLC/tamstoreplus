@@ -12,7 +12,7 @@
     }
 
     select {
-        padding: 18px 18px 18px 24px;
+        padding: 18px 64px 18px 24px;
         color: #737373;
         font-size: 16px;
         font-style: normal;
@@ -27,5 +27,12 @@
         background-repeat: no-repeat;
         background-position: right 24px center;
         background-size: 32px;
+
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+
     }
 }

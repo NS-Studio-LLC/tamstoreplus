@@ -9,6 +9,10 @@
     background: #212121;
     width: fit-content;
 
+    @include mq(phone-only){
+        width: 100%;
+    }
+
     .modal-header {
         display: flex;
         flex-direction: column;

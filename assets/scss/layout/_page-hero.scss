@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .page-hero {
     position: relative;
     height: 255px;
@@ -28,6 +30,10 @@
             font-weight: 500;
             line-height: 140%;
             text-transform: uppercase;
+
+            @include mq(tablet-portrait-up){
+                font-size: 32px;
+            }
         }
 
         .breadcrumb {
@@ -36,6 +42,7 @@
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+            white-space: nowrap;
         }
     }
 

@@ -2,9 +2,8 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 16px 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     background: #0E0E0F;
     backdrop-filter: blur(12px);
@@ -15,10 +14,13 @@
 
     @include mq(desktop-up) {
         padding: 16px 50px;
+        justify-content: space-between;
+
     }
 
     @include mq(lg-down) {
         padding: 16px 50px;
+        justify-content: space-between;
     }
 
     .header-navigations {

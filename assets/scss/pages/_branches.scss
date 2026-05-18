@@ -37,6 +37,10 @@
                 align-items: flex-end;
                 width: 25%;
 
+                @include mq(tablet-portrait-up) {
+                    width: 100%;
+                }
+
                 .search-input-div {
                     width: 100%;
                 }
