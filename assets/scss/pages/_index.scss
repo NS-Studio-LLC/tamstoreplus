@@ -46,17 +46,25 @@
     }
 
     .categories-section {
-        padding: 25px 32px;
+        padding: 15px 32px;
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        .swiper-wrapper {
+            padding: 10px 0;
+        }
     }
 
     .featured-blogs {
-        padding: 25px 32px 25px 32px;
+        padding: 10px 32px;
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        .swiper-wrapper {
+            padding: 15px 0;
+        }
 
     }
 

@@ -4,8 +4,8 @@ new Swiper(".categoriesSwiper", {
     speed: 500,
     loop: false,
     navigation: {
-        nextEl: ".btn-next",
-        prevEl: ".btn-prew",
+        nextEl: ".c-btn-next",
+        prevEl: ".c-btn-prew",
     },
     pagination: {
         el: ".swiper-pagination",
@@ -30,8 +30,8 @@ new Swiper(".blogsSwiper", {
     speed: 500,
     loop: false,
     navigation: {
-        nextEl: ".btn-next",
-        prevEl: ".btn-prew",
+        nextEl: ".b-btn-next",
+        prevEl: ".b-btn-prew",
     },
     pagination: {
         el: ".swiper-pagination",
@@ -56,8 +56,8 @@ new Swiper(".productsSwiper", {
     speed: 500,
     loop: false,
     navigation: {
-        nextEl: ".btn-next",
-        prevEl: ".btn-prew",
+        nextEl: ".p-btn-next",
+        prevEl: ".p-btn-prew",
     },
     pagination: {
         el: ".swiper-pagination",
@@ -73,5 +73,15 @@ new Swiper(".productsSwiper", {
         1024: { slidesPerView: 3.5, spaceBetween: 18 },
         1200: { slidesPerView: 4, spaceBetween: 22 },
         1400: { slidesPerView: 4.5, spaceBetween: 22 },
+    },
+});
+
+var swiper = new Swiper(".heroSwiper", {
+    slidesPerView: 1,
+    loop: true,
+    speed: 500,
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
     },
 });

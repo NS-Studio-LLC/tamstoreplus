@@ -9,7 +9,7 @@
     backdrop-filter: blur(12px);
     position: relative;
     z-index: 9;
-
+    padding: 16px 0;
 
 
     @include mq(desktop-up) {

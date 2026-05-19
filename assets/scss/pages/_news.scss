@@ -35,15 +35,26 @@
         }
 
         .tab-pane {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-            gap: 16px;
 
+            &-wrapper {
 
-            @include mq(phone-only) {
-                grid-template-columns: repeat(1, 1fr) !important;
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .news-cards {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+                    gap: 16px;
+
+                    @include mq(phone-only) {
+                        grid-template-columns: repeat(1, 1fr) !important;
+
+                    }
+                }
 
             }
+
         }
     }
 
