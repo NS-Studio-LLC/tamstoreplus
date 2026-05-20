@@ -33,7 +33,7 @@
 @use './ui/buttons/store-link';
 @use './ui/buttons/btn-red';
 @use './ui/buttons/btn-white-bordered';
-@use './ui/buttons/share-button';
+@use './ui/buttons/copy-button';
 @use './ui/buttons/save-button';
 
 // (cards)
@@ -52,6 +52,7 @@
 @use './ui/cards/vacancy-card';
 @use './ui/cards/selected-branch-card';
 @use './ui/cards/contact-info-card';
+@use './ui/cards/gallery-card';
 
 // (inputs)
 @use './ui/inputs/range-input';

@@ -1,4 +1,4 @@
-.share-button {
+.copy-button {
     width: 40px;
     height: 40px;
     display: flex;
@@ -6,4 +6,10 @@
     justify-content: center;
     border-radius: 12px;
     border: 1px solid rgba(94, 63, 60, 0.20);
+
+    img{
+        width: 14px;
+        height: 14px;
+    }
+
 }

@@ -62,7 +62,7 @@
                 gap: 24px;
                 height: 1000px;
                 overflow-y: scroll;
-                scrollbar-width: none;
+                scrollbar-color: #1B1B1B #2A2A2B;
 
                 @include mq(tablet-portrait-up) {
                     width: 100%;
