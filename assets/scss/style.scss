@@ -23,6 +23,7 @@
 @use './pages/blog-details';
 @use './pages/career';
 @use './pages/product-details';
+@use './pages/contact';
 
 // ui
 // (components)
@@ -50,12 +51,14 @@
 @use './ui/cards/blog-card';
 @use './ui/cards/vacancy-card';
 @use './ui/cards/selected-branch-card';
+@use './ui/cards/contact-info-card';
 
 // (inputs)
 @use './ui/inputs/range-input';
 @use './ui/inputs/search-input';
 @use './ui/inputs/input-with-label';
 @use './ui/inputs/file-input';
+@use './ui/inputs/textarea-with-label';
 
 // (selects)
 @use './ui/selects/sortSelect';
