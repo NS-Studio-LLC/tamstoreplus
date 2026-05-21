@@ -278,6 +278,9 @@ textarea {
   line-height: 140%;
   text-transform: capitalize;
 }
+.footer-body .footer-navigation-links .nav-link:hover {
+  text-decoration: underline;
+}
 @media only screen and (max-width: 768px) {
   .footer-body .footer-navigation-links .nav-link {
     text-align: center;
@@ -322,6 +325,10 @@ textarea {
   align-items: center;
   justify-content: center;
   border: 1px solid #FFF;
+  transition: all 0.3s ease-in;
+}
+.footer-body .footer-promo-links .social-links .links .link:hover {
+  transform: scale(1.02);
 }
 .footer-body .footer-promo-links .app-links {
   display: flex;

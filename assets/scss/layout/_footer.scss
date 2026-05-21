@@ -58,6 +58,10 @@
                 line-height: 140%;
                 text-transform: capitalize;
 
+                &:hover{
+                    text-decoration: underline;
+                }
+
                 @include mq(tablet-portrait-up) {
                     text-align: center;
                 }
@@ -106,6 +110,11 @@
                         align-items: center;
                         justify-content: center;
                         border: 1px solid #FFF;
+                        transition: all 0.3s ease-in;
+
+                        &:hover{
+                            transform: scale(1.02);
+                        }
                     }
                 }
             }
