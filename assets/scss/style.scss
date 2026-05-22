@@ -25,6 +25,7 @@
 @use './pages/product-details';
 @use './pages/contact';
 @use './pages/faq';
+@use './pages/vacancy-details';
 
 // ui
 // (components)
@@ -55,6 +56,8 @@
 @use './ui/cards/contact-info-card';
 @use './ui/cards/gallery-card';
 @use './ui/cards/accordion';
+@use './ui/cards/obligation-card';
+@use './ui/cards/our-advantages-card';
 
 // (inputs)
 @use './ui/inputs/range-input';

@@ -1,0 +1,310 @@
+@use '../abstracts/mixins' as *;
+
+.vacancy-details-container {
+
+    .vacancy-head {
+        position: relative;
+        height: 450px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.79) 0%, rgba(0, 0, 0, 0.79) 100%);
+        }
+
+        .head-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: absolute;
+            left: 100px;
+            right: 100px;
+            transform: translate(0, -50%);
+            top: 50%;
+            z-index: 9;
+
+            .vacancy-location {
+                color: #5ADF82;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .vacancy-meta {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                .meta-div {
+                    display: flex;
+                    gap: 8px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    span {
+                        color: #e7bcb8;
+                        font-family: "Plus Jakarta Sans";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            .vacancy-title {
+                color: #FFF;
+                font-family: "Plus Jakarta Sans";
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+            }
+        }
+
+
+    }
+
+    .vacancy-body {
+        padding: 60px;
+        display: flex;
+        gap: 50px;
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        &-left {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
+
+            .vacancy-description {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                &-head {
+                    border-left: 3px solid red;
+
+                    span {
+                        color: #FFF;
+                        font-family: "Plus Jakarta Sans";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 28px;
+                        margin-left: 24px;
+                    }
+                }
+
+                &-body {
+                    .description-text {
+                        color: #e7bcb8;
+                    }
+                }
+            }
+
+            .obligations {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+
+                @include mq(phone-only) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            .requirements {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                .title {
+                    color: #fff;
+                    margin-bottom: 12px;
+                }
+
+                .requirement-div {
+                    display: flex;
+                    gap: 8px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    span {
+                        color: #e7bcb8;
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+            .our-advantages {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                background-color: #000;
+                padding: 24px;
+                border-radius: 16px;
+
+                &-head {
+                    .title {
+                        color: #fff;
+                    }
+                }
+
+                &-body {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 32px;
+
+                    @include mq(phone-only) {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                }
+
+            }
+        }
+
+        &-right {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            @include mq(tablet-portrait-up) {
+                flex-direction: row;
+            }
+
+            @include mq(phone-only) {
+                flex-direction: column;
+            }
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
+
+            .vacancy-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                padding: 24px;
+                border-radius: 16px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                background: #1B1B1C;
+
+                @include mq(tablet-portrait-up) {
+                    width: 40%;
+                    height: fit-content;
+                }
+
+                @include mq(phone-only) {
+                    width: 100%;
+                }
+
+                .vacancy-expiration {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    .title {
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: #e7bcb8;
+                    }
+
+                    .expiration-date {
+                        color: #E5E2E3;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                }
+
+                .btn-red {
+                    width: 100%;
+                }
+
+                .share-vacancy {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .title {
+                        color: #E7BCB8;
+                        font-size: 14px;
+                    }
+
+                }
+
+            }
+
+            .other-vacancies {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                @include mq(tablet-portrait-up) {
+                    width: 60%;
+                }
+
+                @include mq(phone-only) {
+                    width: 100%;
+                }
+
+                .title {
+                    color: #E5E2E3;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                .vacancies {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    height: 600px;
+                    overflow-y: scroll;
+                    scrollbar-color: #1B1B1B #2A2A2B;
+
+                    @include mq(tablet-portrait-up) {
+                        height: 400px;
+                    }
+
+
+                    @include mq(phone-only) {
+                        height: 600px;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+}

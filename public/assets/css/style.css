@@ -2046,6 +2046,276 @@ textarea {
   }
 }
 
+.vacancy-details-container .vacancy-head {
+  position: relative;
+  height: 450px;
+}
+.vacancy-details-container .vacancy-head img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.vacancy-details-container .vacancy-head .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.79) 0%, rgba(0, 0, 0, 0.79) 100%);
+}
+.vacancy-details-container .vacancy-head .head-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  left: 100px;
+  right: 100px;
+  transform: translate(0, -50%);
+  top: 50%;
+  z-index: 9;
+}
+.vacancy-details-container .vacancy-head .head-content .vacancy-location {
+  color: #5ADF82;
+  font-size: 16px;
+  line-height: 24px;
+}
+.vacancy-details-container .vacancy-head .head-content .vacancy-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.vacancy-details-container .vacancy-head .head-content .vacancy-meta .meta-div {
+  display: flex;
+  gap: 8px;
+}
+.vacancy-details-container .vacancy-head .head-content .vacancy-meta .meta-div img {
+  width: 20px;
+  height: 20px;
+}
+.vacancy-details-container .vacancy-head .head-content .vacancy-meta .meta-div svg {
+  width: 20px;
+  height: 20px;
+}
+.vacancy-details-container .vacancy-head .head-content .vacancy-meta .meta-div span {
+  color: #e7bcb8;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.vacancy-details-container .vacancy-head .head-content .vacancy-title {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+.vacancy-details-container .vacancy-body {
+  padding: 60px;
+  display: flex;
+  gap: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .vacancy-details-container .vacancy-body {
+    flex-direction: column;
+    padding: 24px;
+  }
+}
+.vacancy-details-container .vacancy-body-left {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+@media only screen and (max-width: 768px) {
+  .vacancy-details-container .vacancy-body-left {
+    width: 100%;
+  }
+}
+.vacancy-details-container .vacancy-body-left .vacancy-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.vacancy-details-container .vacancy-body-left .vacancy-description-head {
+  border-left: 3px solid red;
+}
+.vacancy-details-container .vacancy-body-left .vacancy-description-head span {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  margin-left: 24px;
+}
+.vacancy-details-container .vacancy-body-left .vacancy-description-body .description-text {
+  color: #e7bcb8;
+}
+.vacancy-details-container .vacancy-body-left .obligations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media only screen and (max-width: 480px) {
+  .vacancy-details-container .vacancy-body-left .obligations {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.vacancy-details-container .vacancy-body-left .requirements {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.vacancy-details-container .vacancy-body-left .requirements .title {
+  color: #fff;
+  margin-bottom: 12px;
+}
+.vacancy-details-container .vacancy-body-left .requirements .requirement-div {
+  display: flex;
+  gap: 8px;
+}
+.vacancy-details-container .vacancy-body-left .requirements .requirement-div img {
+  width: 20px;
+  height: 20px;
+}
+.vacancy-details-container .vacancy-body-left .requirements .requirement-div span {
+  color: #e7bcb8;
+  font-size: 14px;
+}
+.vacancy-details-container .vacancy-body-left .our-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #000;
+  padding: 24px;
+  border-radius: 16px;
+}
+.vacancy-details-container .vacancy-body-left .our-advantages-head .title {
+  color: #fff;
+}
+.vacancy-details-container .vacancy-body-left .our-advantages-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+@media only screen and (max-width: 480px) {
+  .vacancy-details-container .vacancy-body-left .our-advantages-body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.vacancy-details-container .vacancy-body-right {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .vacancy-details-container .vacancy-body-right {
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .vacancy-details-container .vacancy-body-right {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .vacancy-details-container .vacancy-body-right {
+    width: 100%;
+  }
+}
+.vacancy-details-container .vacancy-body-right .vacancy-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #1B1B1C;
+}
+@media only screen and (max-width: 768px) {
+  .vacancy-details-container .vacancy-body-right .vacancy-actions {
+    width: 40%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .vacancy-details-container .vacancy-body-right .vacancy-actions {
+    width: 100%;
+  }
+}
+.vacancy-details-container .vacancy-body-right .vacancy-actions .vacancy-expiration {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.vacancy-details-container .vacancy-body-right .vacancy-actions .vacancy-expiration .title {
+  font-size: 12px;
+  line-height: 16px;
+  color: #e7bcb8;
+}
+.vacancy-details-container .vacancy-body-right .vacancy-actions .vacancy-expiration .expiration-date {
+  color: #E5E2E3;
+  font-size: 20px;
+  font-weight: 700;
+}
+.vacancy-details-container .vacancy-body-right .vacancy-actions .btn-red {
+  width: 100%;
+}
+.vacancy-details-container .vacancy-body-right .vacancy-actions .share-vacancy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vacancy-details-container .vacancy-body-right .vacancy-actions .share-vacancy .title {
+  color: #E7BCB8;
+  font-size: 14px;
+}
+.vacancy-details-container .vacancy-body-right .other-vacancies {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media only screen and (max-width: 768px) {
+  .vacancy-details-container .vacancy-body-right .other-vacancies {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .vacancy-details-container .vacancy-body-right .other-vacancies {
+    width: 100%;
+  }
+}
+.vacancy-details-container .vacancy-body-right .other-vacancies .title {
+  color: #E5E2E3;
+  font-size: 16px;
+  line-height: 24px;
+}
+.vacancy-details-container .vacancy-body-right .other-vacancies .vacancies {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 600px;
+  overflow-y: scroll;
+  scrollbar-color: #1B1B1B #2A2A2B;
+}
+@media only screen and (max-width: 768px) {
+  .vacancy-details-container .vacancy-body-right .other-vacancies .vacancies {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .vacancy-details-container .vacancy-body-right .other-vacancies .vacancies {
+    height: 600px;
+  }
+}
+
 .btn-more {
   display: flex;
   align-items: center;
@@ -3169,6 +3439,62 @@ textarea {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+}
+
+.obligation-card {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #1B1B1C;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.obligation-card img {
+  width: 20px;
+  height: 20px;
+}
+.obligation-card svg {
+  width: 24px;
+  height: 24px;
+}
+.obligation-card span {
+  color: #fff;
+}
+.obligation-card .card-description {
+  color: #e7bcb8;
+}
+
+.our-advantages-card {
+  display: flex;
+  gap: 24px;
+}
+.our-advantages-card .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(215, 0, 30, 0.1019607843);
+  padding: 12px;
+  border-radius: 8px;
+}
+.our-advantages-card .card-icon img {
+  width: 20px;
+  height: 20px;
+}
+.our-advantages-card .card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.our-advantages-card .card-infos {
+  display: flex;
+  flex-direction: column;
+}
+.our-advantages-card .card-infos-title {
+  font-size: 16px;
+  color: #fff;
+}
+.our-advantages-card .card-infos-description {
+  color: #e7bcb8;
 }
 
 .range-input-container {
