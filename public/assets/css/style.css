@@ -2316,6 +2316,179 @@ textarea {
   }
 }
 
+.suggestions-container .suggestions-body {
+  padding: 50px 32px;
+  display: flex;
+  gap: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .suggestions-container .suggestions-body {
+    padding: 50px 16px;
+    flex-direction: column;
+  }
+}
+.suggestions-container .suggestions-body-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 35%;
+}
+@media only screen and (max-width: 768px) {
+  .suggestions-container .suggestions-body-left {
+    width: 100%;
+  }
+}
+.suggestions-container .suggestions-body-left .application-infos {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #2A2A2B;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.suggestions-container .suggestions-body-left .application-infos .title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.suggestions-container .suggestions-body-left .application-infos .application-info {
+  display: flex;
+  gap: 12px;
+}
+.suggestions-container .suggestions-body-left .application-infos .application-info .info-icon img {
+  width: 24px;
+  height: 24px;
+}
+.suggestions-container .suggestions-body-left .application-infos .application-info .info-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.suggestions-container .suggestions-body-left .application-infos .application-info .info-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.suggestions-container .suggestions-body-left .application-infos .application-info .info-texts .label {
+  color: #E7BCB8;
+  font-size: 12px;
+  font-weight: 400;
+}
+.suggestions-container .suggestions-body-left .application-infos .application-info .info-texts .value {
+  color: #E5E2E3;
+  font-weight: 600;
+  font-size: 18px;
+}
+.suggestions-container .suggestions-body-left .inform-box {
+  position: relative;
+  height: 255px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .suggestions-container .suggestions-body-left .inform-box {
+    height: 50px;
+  }
+}
+.suggestions-container .suggestions-body-left .inform-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.suggestions-container .suggestions-body-left .inform-box .box-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.suggestions-container .suggestions-body-left .inform-box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.79) 0%, rgba(0, 0, 0, 0.79) 100%);
+}
+.suggestions-container .suggestions-body-right {
+  width: 65%;
+}
+@media only screen and (max-width: 768px) {
+  .suggestions-container .suggestions-body-right {
+    width: 100%;
+  }
+}
+.suggestions-container .suggestions-body-right .application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #2A2A2B;
+  padding: 24px;
+}
+.suggestions-container .suggestions-body-right .application-form .inputs {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .suggestions-container .suggestions-body-right .application-form .inputs {
+    flex-direction: column;
+  }
+}
+.suggestions-container .suggestions-body-right .application-form .inputs .input-with-label {
+  flex-grow: 1;
+}
+.suggestions-container .suggestions-body-right .application-form .inputs .input-with-label input {
+  width: 100%;
+}
+.suggestions-container .suggestions-body-right .application-form .nav-pills {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+@media only screen and (max-width: 768px) {
+  .suggestions-container .suggestions-body-right .application-form .nav-pills {
+    flex-direction: column;
+  }
+  .suggestions-container .suggestions-body-right .application-form .nav-pills .nav-item {
+    width: 100%;
+  }
+}
+.suggestions-container .suggestions-body-right .application-form .nav-pills .nav-link {
+  color: #E7BCB8;
+  padding: 12px;
+  background-color: #0E0E0F;
+  font-size: 12px;
+  font-weight: 400;
+}
+@media only screen and (max-width: 480px) {
+  .suggestions-container .suggestions-body-right .application-form .nav-pills .nav-link {
+    width: 100%;
+  }
+}
+.suggestions-container .suggestions-body-right .application-form .nav-pills .active {
+  background-color: #353436;
+}
+.suggestions-container .suggestions-body-right .application-form .btn-red {
+  margin-top: 12px;
+  width: 40%;
+}
+@media only screen and (max-width: 768px) {
+  .suggestions-container .suggestions-body-right .application-form .btn-red {
+    width: 100%;
+  }
+}
+
 .btn-more {
   display: flex;
   align-items: center;
@@ -3708,6 +3881,64 @@ textarea {
   background: #303031;
   resize: none;
   min-height: 200px;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  gap: 12px;
+  /* 5. Üzərinə gələndə (hover) yüngül işıqlanma effekti */
+}
+.custom-checkbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.custom-checkbox input[type=checkbox]:checked ~ .checkmark {
+  background-color: #5C3D3D;
+}
+.custom-checkbox input[type=checkbox]:checked ~ .checkmark::after {
+  display: block;
+}
+.custom-checkbox .checkmark {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 2px solid #5C3D3D;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid #EAEAEA;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.custom-checkbox .label-text {
+  color: #C4BABA;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.custom-checkbox:hover input ~ .checkmark {
+  border-color: #7A5252;
+}
+.custom-checkbox:hover .label-text {
+  color: #EAEAEA;
 }
 
 .custom-sort-wrapper {

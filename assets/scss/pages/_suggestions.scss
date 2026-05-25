@@ -1,0 +1,198 @@
+@use '../abstracts/mixins' as *;
+
+.suggestions-container {
+
+    .suggestions-body {
+        padding: 50px 32px;
+        display: flex;
+        gap: 50px;
+
+        @include mq(tablet-portrait-up) {
+            padding: 50px 16px;
+            flex-direction: column;
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            width: 35%;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
+
+            .application-infos {
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                background: #2A2A2B;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                .title {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 12px;
+                }
+
+                .application-info {
+                    display: flex;
+                    gap: 12px;
+
+                    .info-icon {
+                        img {
+                            width: 24px;
+                            height: 24px;
+
+                        }
+
+                        svg {
+                            width: 24px;
+                            height: 24px;
+
+                        }
+                    }
+
+                    .info-texts {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        .label {
+                            color: #E7BCB8;
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+
+                        .value {
+                            color: #E5E2E3;
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+
+                    }
+                }
+            }
+
+            .inform-box {
+                position: relative;
+                height: 255px;
+                border-radius: 16px;
+                overflow: hidden;
+
+                @include mq(tablet-portrait-up) {
+                    height: 50px;
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .box-content {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 9;
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                }
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.79) 0%, rgba(0, 0, 0, 0.79) 100%);
+                }
+            }
+        }
+
+        &-right {
+            width: 65%;
+
+            @include mq(tablet-portrait-up) {
+                width: 100%;
+            }
+
+            .application-form {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                background: #2A2A2B;
+                padding: 24px;
+
+                .inputs {
+                    display: flex;
+                    gap: 24px;
+                    width: 100%;
+
+                    @include mq(tablet-portrait-up) {
+                        flex-direction: column;
+                    }
+
+                    .input-with-label {
+                        flex-grow: 1;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .nav-pills {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    @include mq(tablet-portrait-up) {
+                        flex-direction: column;
+
+                        .nav-item {
+                            width: 100%;
+                        }
+                    }
+
+                    .nav-link {
+                        color: #E7BCB8;
+                        padding: 12px;
+                        background-color: #0E0E0F;
+                        font-size: 12px;
+                        font-weight: 400;
+
+                        @include mq(phone-only) {
+                            width: 100%;
+                        }
+                    }
+
+                    .active {
+                        background-color: #353436;
+                    }
+
+                }
+
+                .btn-red {
+                    margin-top: 12px;
+                    width: 40%;
+
+                    @include mq(tablet-portrait-up) {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}

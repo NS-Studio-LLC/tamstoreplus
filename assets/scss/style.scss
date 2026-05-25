@@ -26,6 +26,7 @@
 @use './pages/contact';
 @use './pages/faq';
 @use './pages/vacancy-details';
+@use './pages/suggestions';
 
 // ui
 // (components)
@@ -65,6 +66,7 @@
 @use './ui/inputs/input-with-label';
 @use './ui/inputs/file-input';
 @use './ui/inputs/textarea-with-label';
+@use './ui/inputs/custom-checkbox';
 
 // (selects)
 @use './ui/selects/sortSelect';

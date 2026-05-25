@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Təməl viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Zoom meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <title>TamStore Plus</title>
+</head>
+
+<body>
+
+    <!-- header start -->
+    <div id="header-placeholder"></div>
+    <script>
+        (function () {
+            const url = "header.html";
+            const cacheKey = `partial:${url}`;
+            const node = document.getElementById("header-placeholder");
+            if (!node) return;
+
+            try {
+                const cached = localStorage.getItem(cacheKey);
+                if (cached) node.innerHTML = cached;
+            } catch (error) {
+                console.warn("Header preload cache error:", error);
+            }
+
+            if (window.location.protocol === "file:") return;
+
+            fetch(url)
+                .then((response) => {
+                    if (!response.ok) throw new Error(`Header yüklənmədi: ${response.status}`);
+                    return response.text();
+                })
+                .then((html) => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, "text/html");
+                    const nextHtml = doc.body.innerHTML;
+                    if (node.innerHTML !== nextHtml) node.innerHTML = nextHtml;
+                    try {
+                        localStorage.setItem(cacheKey, nextHtml);
+                    } catch (error) {
+                        console.warn("Header cache write error:", error);
+                    }
+                })
+                .catch((error) => {
+                    console.warn("Header preload fetch error:", error);
+                });
+        })();
+    </script>
+    <!-- header end -->
+
+    <div class="page-container suggestions-container">
+
+        <!-- hero start -->
+        <div class="homepage-hero suggestions-head">
+
+            <img src="assets/images/hompage-hero.jpg" alt="">
+
+            <div class="hero-content">
+
+                <span class="first-slogan">Tamstore plus təcrübəsi</span>
+
+                <p class="second-slogan">
+                    Sizin səsiniz, bizim keyfiyyətimizdir
+                </p>
+
+                <p class="hero-content-description">
+                    Hər bir təklifiniz bizim üçün dəyərlidir. Xidmət səviyyəmizi artırmaq və sizə daha mükəmməl alı -
+                    veriş təcrübəsi təqdim etmək üçün irad və təklflərinizi bizimlə bölüşün.
+                </p>
+
+            </div>
+
+            <div class="overlay"></div>
+        </div>
+        <!-- hero end -->
+
+        <div class="suggestions-body">
+
+            <div class="suggestions-body-left">
+
+                <div class="application-infos">
+                    <span class="title">Müraciət kanalları</span>
+
+                    <div class="application-info">
+
+                        <div class="info-icon">
+                            <img src="assets/icons/phone-red.svg" alt="">
+                        </div>
+
+                        <div class="info-texts">
+                            <span class="label">Qaynar xətt</span>
+                            <span class="value">*1122</span>
+                        </div>
+
+                    </div>
+
+                    <div class="application-info">
+
+                        <div class="info-icon">
+                            <img src="assets/icons/email-red.svg" alt="">
+                        </div>
+
+                        <div class="info-texts">
+                            <span class="label">Elektron poçt</span>
+                            <span class="value">plus@tamstore.az</span>
+                        </div>
+
+                    </div>
+
+                    <div class="application-info">
+
+                        <div class="info-icon">
+                            <img src="assets/icons/location-red.svg" alt="">
+                        </div>
+
+                        <div class="info-texts">
+                            <span class="label">Baş ofis</span>
+                            <span class="value">Bakı ş. Heydər Əliyrv pr. 115</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="inform-box">
+
+                    <img src="assets/images/blog-img3.png" alt="">
+
+                    <div class="box-content">
+                        Hər bir müraciət 24 saat ərzində nəzərdən keçirilir.
+                    </div>
+
+                    <div class="overlay"></div>
+
+                </div>
+
+            </div>
+
+            <div class="suggestions-body-right">
+
+                <div class="application-form">
+
+                    <div class="inputs">
+
+                        <div class="input-with-label">
+                            <label for="">Ad və soyad</label>
+                            <input type="text" placeholder="Adınızı daxil edin...">
+                        </div>
+
+                        <div class="input-with-label">
+                            <label for="">Əlaqə nömrəsi / Email</label>
+                            <input type="text" placeholder="Email daxil edin...">
+                        </div>
+
+                    </div>
+
+                    <ul class="nav nav-pills" id="news-tabs" role="tablist">
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tab-all" data-bs-toggle="pill"
+                                data-bs-target="#content-all" type="button" role="tab" aria-controls="content-all"
+                                aria-selected="true">
+                                Hamısı
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab-news" data-bs-toggle="pill"
+                                data-bs-target="#product-quality" type="button" role="tab"
+                                aria-controls="product-quality" aria-selected="false">
+                                Məhsul keyfiyyəti
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab-campaigns" data-bs-toggle="pill"
+                                data-bs-target="#cleanlines" type="button" role="tab" aria-controls="cleanlines"
+                                aria-selected="false">
+                                Təmizlik və səliqə
+                            </button>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content" id="news-tabs-content">
+
+                        <div class="tab-pane fade show active" id="content-all" role="tabpanel"
+                            aria-labelledby="tab-all">
+
+                            <div class="textarea-with-label">
+                                <label for="">Sizin mesajınız...</label>
+                                <textarea name="" id=""
+                                    placeholder="Təklif və ya iradlarınızı burada ətraflı qeyd edin..."></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="product-quality" role="tabpanel" aria-labelledby="tab-news">
+                            <div class="textarea-with-label">
+                                <label for="">Sizin mesajınız...</label>
+                                <textarea name="" id=""
+                                    placeholder="Təklif və ya iradlarınızı burada ətraflı qeyd edin..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="cleanlines" role="tabpanel" aria-labelledby="tab-campaigns">
+                            <div class="textarea-with-label">
+                                <label for="">Sizin mesajınız...</label>
+                                <textarea name="" id=""
+                                    placeholder="Təklif və ya iradlarınızı burada ətraflı qeyd edin..."></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="data_consent" required>
+
+                        <span class="checkmark"></span>
+
+                        <span class="label-text">Şəxsi məlumatlarımın emal edilməsinə razılıq verirəm.</span>
+                    </label>
+
+                    <button class="btn-red">
+                        <span>Göndər</span>
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- footer start -->
+    <div id="footer-placeholder"></div>
+    <script>
+        (function () {
+            const url = "footer.html";
+            const cacheKey = `partial:${url}`;
+            const node = document.getElementById("footer-placeholder");
+            if (!node) return;
+
+            try {
+                const cached = localStorage.getItem(cacheKey);
+                if (cached) node.innerHTML = cached;
+            } catch (error) {
+                console.warn("Footer preload cache error:", error);
+            }
+
+            if (window.location.protocol === "file:") return;
+
+            fetch(url)
+                .then((response) => {
+                    if (!response.ok) throw new Error(`Footer yüklənmədi: ${response.status}`);
+                    return response.text();
+                })
+                .then((html) => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, "text/html");
+                    const nextHtml = doc.body.innerHTML;
+                    if (node.innerHTML !== nextHtml) node.innerHTML = nextHtml;
+                    try {
+                        localStorage.setItem(cacheKey, nextHtml);
+                    } catch (error) {
+                        console.warn("Footer cache write error:", error);
+                    }
+                })
+                .catch((error) => {
+                    console.warn("Footer preload fetch error:", error);
+                });
+        })();
+    </script>
+    <!-- footer end -->
+
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+    <script src="assets/js/productsSwiper.js"></script>
+    <script src="assets/js/splide.js"></script>
+</body>
+
+</html>
