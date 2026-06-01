@@ -145,7 +145,8 @@ textarea {
 .header .header-navigations {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .header .header-navigations a {
@@ -1121,7 +1122,6 @@ textarea {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(<path-to-image>) lightgray 50%/cover no-repeat;
   border-radius: 8px;
   overflow: hidden;
-  max-height: 780px;
   width: 50%;
   position: relative;
 }

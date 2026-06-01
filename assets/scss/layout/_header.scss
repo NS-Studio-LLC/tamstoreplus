@@ -26,7 +26,8 @@
     .header-navigations {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 8px;
 
         a {
